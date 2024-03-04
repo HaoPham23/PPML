@@ -1,0 +1,3 @@
+flask
+numpy==1.26.2
+tenseal==0.3.14

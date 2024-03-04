@@ -4,7 +4,7 @@ from utils import *
 import requests
 import json
 
-URL = 'http://127.0.0.1:5000/predict'
+URL = 'http://localhost:5000/predict'
 
 def initialize_key():
     # parameters

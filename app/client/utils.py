@@ -27,7 +27,7 @@ def to_megabytes(size_in_bytes: int) -> float:
     return round(size_in_bytes/2**20, 2)
 
 def pick_a_random_data_from_test_set():
-    data = pd.read_csv("../../data/framingham.csv")
+    data = pd.read_csv("./framingham.csv")
     X = data.drop(['TenYearCHD'], axis=1, inplace=False)
     Y = np.array(data['TenYearCHD'])
     X = X.apply(lambda x: x.fillna(x.mean()),axis=0)

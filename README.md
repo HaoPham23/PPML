@@ -4,6 +4,8 @@
 - [app](./app/): Simulates a simple PPML system's workflow. [How to run](#how-to-run) 
 
 ## How to run
+
+### On local machine
 1. Run the server:
 ```sh
 cd app/server
@@ -13,6 +15,11 @@ python3 server.py
 ```sh
 cd app/client
 python3 client.py
+```
+### On Docker
+```sh
+docker compose build
+docker compose up
 ```
 
 ## An example log:

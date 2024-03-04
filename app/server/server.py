@@ -41,6 +41,10 @@ class EncryptedModel:
         z2 = self.forward_propagation(enc_X)
         return z2
 
+@app.route('/index', methods=['GET'])
+def index():
+    return jsonify({'message': 'Hello, World!'})
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
@@ -69,6 +73,6 @@ if __name__ == '__main__':
     print("[+] Loading model")
     enc_model = EncryptedModel()
     print("    [-] Model loaded!")
-    app.run(port=PORT)
+    app.run(host="0.0.0.0", port=PORT)
     print(f"[+] Server is running at port {PORT}!")
     

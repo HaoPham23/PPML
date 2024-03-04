@@ -1,0 +1,12 @@
+services:
+  server:
+    build: ./app/server
+    command: python3 ./server.py
+    ports:
+      - "5000:5000"
+  client:
+    build: ./app/client
+    command: python3 ./client.py
+    network_mode: host
+    depends_on:
+      - server
